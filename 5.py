@@ -21,8 +21,9 @@ def drawBoard(board):
     st.write('   |   |')
 
 letter = st.sidebar.text_input('please input X or O?' , 'X O')
-move = st.sidebar.text_input('What is your next move? (1-9)')
-abc = st.sider.text_input.lower().startswith('y')
+move = st.sidebar.text_input('please 1 2 3 .. 9')
+playagain = st.sidebar.text_input('Play again: y/n')
+#return = st.sider.text_input.lower().startswith('y')
 
 def inputPlayerLetter():
     # Lets the player type which letter they want to be.
@@ -31,7 +32,7 @@ def inputPlayerLetter():
     while not (letter == 'X' or letter == 'O'):
         st.write('Do you want to be X or O?')
         #letter = st.sider.text_input('please input X or O?' , 'X O')
-        letter = st.sidebar.text_input('please input X or O?' , 'X O')
+        #letter = st.sidebar.text_input('please input X or O?' , 'X O')
         letter = letter.upper()
     
     # the first element in the list is the player’s letter, the second is the computer's letter.
@@ -50,8 +51,8 @@ def whoGoesFirst():
 def playAgain():
     # This function returns True if the player wants to play again, otherwise it returns False.
     st.write('Do you want to play again? (yes or no)')
-    # return st.sider.text_input.lower().startswith('y')
-    return abc
+    return st.sider.text_input.lower().startswith('y')
+
 # 下子
 def makeMove(board, letter, move):
     board[move] = letter
