@@ -21,7 +21,7 @@ def drawBoard(board):
     st.write('   |   |')
 
 #letter = st.sidebar.text_input('please input X or O?' , 'X O')
-move = st.sidebar.text_input('please 1 2 3 .. 9')
+#move = st.sidebar.text_input('please 1 2 3 .. 9')
 playagain = st.sidebar.text_input('Play again: y/n')
 #return = st.sider.text_input.lower().startswith('y')
 
@@ -53,7 +53,7 @@ def playAgain():
     # This function returns True if the player wants to play again, otherwise it returns False.
     st.write('Do you want to play again? (yes or no)')
     return st.sider.text_input.lower().startswith('y')
-
+    return int(playagain)
 # 下子
 def makeMove(board, letter, move):
     board[move] = letter
@@ -90,6 +90,7 @@ def getPlayerMove(board):
     while move not in '1 2 3 4 5 6 7 8 9'.split() or not isSpaceFree(board, int(move)):
         st.write('What is your next move? (1-9)')
         #move = st.sidebar.text_input
+        move = st.sidebar.text_input('please 1 2 3 .. 9')
     return int(move)
     move = move.upper()
 
