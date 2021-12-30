@@ -20,7 +20,7 @@ def drawBoard(board):
     st.write(' ' + board[1] + ' | ' + board[2] + ' | ' + board[3])
     st.write('   |   |')
 
-letter = st.sidebar.text_input('please input X or O?' , 'X O')
+#letter = st.sidebar.text_input('please input X or O?' , 'X O')
 move = st.sidebar.text_input('please 1 2 3 .. 9')
 playagain = st.sidebar.text_input('Play again: y/n')
 #return = st.sider.text_input.lower().startswith('y')
@@ -33,6 +33,7 @@ def inputPlayerLetter():
         st.write('Do you want to be X or O?')
         #letter = st.sider.text_input('please input X or O?' , 'X O')
         #letter = st.sidebar.text_input('please input X or O?' , 'X O')
+        letter = st.sidebar.text_input('please input X or O?' , 'X O')
         letter = letter.upper()
     
     # the first element in the list is the player’s letter, the second is the computer's letter.
