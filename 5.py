@@ -22,7 +22,7 @@ def drawBoard(board):
 
 letter = st.sidebar.text_input('please input X or O?' , 'X O')
 move = st.sidebar.text_input('What is your next move? (1-9)')
-return st.sider.text_input.lower().startswith('y')
+abc = st.sider.text_input.lower().startswith('y')
 
 def inputPlayerLetter():
     # Lets the player type which letter they want to be.
@@ -50,8 +50,8 @@ def whoGoesFirst():
 def playAgain():
     # This function returns True if the player wants to play again, otherwise it returns False.
     st.write('Do you want to play again? (yes or no)')
-    return st.sider.text_input.lower().startswith('y')
-
+    # return st.sider.text_input.lower().startswith('y')
+    return abc
 # 下子
 def makeMove(board, letter, move):
     board[move] = letter
